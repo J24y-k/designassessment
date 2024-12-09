@@ -1,0 +1,4 @@
+Red: #ab3c3c
+Dark Blue/Green: #314b57
+Heading Font: Roboto Slab (Google Fonts): https://www.google.com/fonts/specimen/Roboto+Slab
+Paragraph Font: Helvetica, Arial
