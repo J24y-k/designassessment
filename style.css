@@ -117,7 +117,6 @@ main h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center;
 }
 
 .article img {
@@ -127,13 +126,11 @@ main h2 {
 }
 
 .article {
-    background: #fff;
     padding: 10px;
     flex: 1 1 calc(100% - 40px);
     margin: 10px;
     max-width: 300px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
 }
 
 .article p {
@@ -147,7 +144,6 @@ main h2 {
     font-weight: bold;
 }
 
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.5em;
