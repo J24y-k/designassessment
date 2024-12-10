@@ -5,36 +5,40 @@
 }
 
 body {
-    font-family: Helvetica, Arial;
+    font-family: Helvetica, Arial, sans-serif;
     line-height: 1.6;
 }
 
 header.hero {
     background-color: #314b57;
     color: white;
-    padding: 15px; 
+    padding: 20px;
 }
 
 header h1 {
-    font-family: 'Roboto Slab';
-    font-size: 1.4em;
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.8em;
 }
 
 .hero-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
+    gap: 20px;
 }
 
 .hero-text {
     max-width: 60%;
-    margin-top: 50px;
+    margin: 20px auto;
+    text-align: left;
 }
 
 .circle-links {
     display: flex;
-    gap: 10px;
-    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
 }
 
 .circle-links a {
@@ -47,25 +51,24 @@ header h1 {
 
 .circle-links img {
     border-radius: 50%;
-    width: 170px; 
-    height: 170px;
+    width: 150px; 
+    height: 150px;
 }
 
 .map {
-    width: auto;
-    height: 106%;
-    border-radius: 0;
-    margin-left: 10px;
-    margin-right: 90px;
-    
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    margin: 20px auto;
 }
 
-
 main h2 {
-    font-family: 'Roboto Slab';
+    font-family: 'Roboto Slab', serif;
     color: #ab3c3c;
-    margin-left: 50px;
-    font-size: 45px;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 2em;
+    margin-left: 30px;
 }
 
 .service-area {
@@ -74,28 +77,31 @@ main h2 {
 }
 
 .service-content {
-    display: flex; 
-    align-items: flex-start;
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    margin-left: 50px; ;
-    
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0 auto;
 }
 
 .service-content img {
-    width: 30%; 
+    width: 100%; 
+    max-width: 300px;
     height: auto;
     margin-bottom: 10px;
+    margin-left: 35px;
 }
 
 .text-content {
     flex: 1; 
-    margin-top: 5px;
+    margin: 10px auto;
     font-size: 16px;
+    text-align: justify;
 }
 
 .text-content p {
     margin-bottom: 10px;
-    margin-right: 50px;
 }
 
 .text-content p a {
@@ -109,27 +115,79 @@ main h2 {
 
 .article-grid {
     display: flex;
-    gap: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
 }
 
 .article img {
     width: 100%;
+    max-width: 300px;
     height: auto;
 }
 
 .article {
     background: #fff;
     padding: 10px;
-    flex: 1;
-    margin-left: 35px;
+    flex: 1 1 calc(100% - 40px);
+    margin: 10px;
+    max-width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 .article p {
     color: #333;
+    margin-bottom: 10px;
 }
 
 .article a {
     text-decoration: none;
     color: #ab3c3c;
     font-weight: bold;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text {
+        max-width: 90%;
+    }
+
+    .service-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        margin: 0 auto;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    .circle-links img {
+        width: 100px;
+        height: 100px;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    .article {
+        max-width: 100%;
+    }
 }
